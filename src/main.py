@@ -39,7 +39,7 @@ def render(bodies, out, BORDER_COLOR, RESOLUTION):
 
 G = 1e-2
 RESOLUTION = np.array([720, 1280])
-N = 10000
+N = 100
 DIMENSIONS = 2
 ITERATIONS = 1e3
 FPS = 25
