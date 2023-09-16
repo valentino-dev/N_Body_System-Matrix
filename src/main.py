@@ -16,8 +16,8 @@ def matricies_calc_np(bodies, G, DIMENSIONS):
     return bodies
     
 def render(bodies, out, BORDER_COLOR, RESOLUTION):
-        # os.system("clear")
-        # print("Seconds: ", time.time() - START_TIME)
+        os.system("clear")
+        print("Seconds: ", time.time() - START_TIME)
         frame_time = time.time()
     
         frame = np.zeros(RESOLUTION, dtype="uint8")
@@ -39,11 +39,11 @@ def render(bodies, out, BORDER_COLOR, RESOLUTION):
 
 G = 1e-2
 RESOLUTION = np.array([720, 1280])
-N = 1000
+N = 10000
 DIMENSIONS = 2
 ITERATIONS = 1e3
 FPS = 25
-DURATION = 5*1
+DURATION = 30*1
 SIMULATING_TIME = 10
 BORDER_COLOR = 100
 # size = 720*16//9, 720
