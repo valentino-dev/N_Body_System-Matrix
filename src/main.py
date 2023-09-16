@@ -20,7 +20,7 @@ bodies = (np.random.rand(N, DIMENSIONS*2) * np.concatenate((RESOLUTION, np.array
 # data = np.ndarray((ITERATIONS, N, DIMENSIONS))
 
 G_VECTOR = np.array((G, G))
-out = cv2.VideoWriter(filename="output.mp4", fourcc=cv2.VideoWriter_fourcc(*"mp4v"), fps=FPS, frameSize=(RESOLUTION[1], RESOLUTION[0]), isColor=False)
+out = cv2.VideoWriter(filename="videos/output.mp4", fourcc=cv2.VideoWriter_fourcc(*"mp4v"), fps=FPS, frameSize=(RESOLUTION[1], RESOLUTION[0]), isColor=False)
 frame_time = 0
 START_TIME = time.time()
 iteration = 0
@@ -47,7 +47,7 @@ while time.time() - START_TIME < DURATION:
         # mask = bodies     
         for i in range(bodies.shape[0]):
             if bodies[i, 0] < RESOLUTION[0] and bodies[i, 0] > 0 and bodies[i, 1] < RESOLUTION[1] and bodies[i, 1] > 0:
-                frame[int(bodies[i, 0]), int(bodies[i, 1])] = 255
+                frame[int(bodies[i, 0]), int(bodies[i, 1])] += 100 
     
         out.write(frame)
 
